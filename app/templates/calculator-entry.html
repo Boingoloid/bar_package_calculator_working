@@ -1,0 +1,345 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="list-builder"></div>
+
+	<form  id="calc-form" action="" method="post" style="text-align: center;">
+	{{ form.csrf_token }}
+      </div>
+		<h1>Bar/Drinks Package Calculator</h1>
+		<br/>
+		
+		<p class="bottle-text" id="guests">
+			{{ form.guests.label (class='guests_label') }}
+			{{ form.guests (class='center_text', id='guest_input', autocomplete="off",type="number",min="0", step="1")}}
+		</p>
+		<p class="bottle-text" id="duration">
+			{{ form.duration.label (id="duration_label")}}
+			{{ form.duration (class='center_text', id="duration_input", autocomplete="off",type="number", min="0", step="1")}}
+		</p>
+        <p class="bottle-text" style="align-items: center; margin-bottom:0;">
+            <label  class="label_percent_drinking">3. What % of guests will Drink Alcohol?</label><br/>
+			<div id="slider_percent_drinking"></div>
+			<input class="percent_drinking_label_percentage"id="value_percent_drinking" type='number' style="text-align:right;">
+			<label id="alcohol_drinkers_label" style="color:gray; font-size:11pt;"></label>
+        <p class="bottle-text" style="align-items: center; margin-bottom:0;">
+		<p style="line-height: .3em"></p>
+            <label class="label_drinking_type" style="">4. What kind of alcohol will people drink?</label><br/>
+	        <label for="event_type_dropdown" style="font-size: 10pt; font-weight: normal; color: gray;">Suggestions by event type:</label>
+	        <select name="event_type_dropdown" id="event_type_dropdown" style="font-size: 9pt; font-weight:normal; color:gray;">
+                <option value="" selected disabled hidden>Choose here</option>
+		        <option>Bachelorette Party</option>
+                <option>Bachelor Party</option>
+                <option>Wedding</option>
+                <option>Game Watch</option>
+                <option>Work Happy Hour</option>
+                <option>Holiday Party</option>
+                <option>Brunch</option>
+		        <option>Custom</option>
+            </select>
+			<div class="alcohol_type_slider_container spirits_slider_container">
+				<label class="alcohol_type_label label_percent_drinking_spirits" style="">Spirits:</label>
+				<div class="small_slider" id="slider_percent_drinking_spirits"></div>
+				<input class="alcohol_type_label_percentage" id="value_percent_drinking_spirits" type='number' step="0.5">
+				<label class="gray_percent_symbol">%</label>
+				<div class="lock_container">
+					<img class="unlocked_image" src="static/img/unlocked.png">
+					<img class="locked_image" src="static/img/locked.png">
+				</div>
+			</div>
+
+			<div class="alcohol_type_slider_container beer_slider_container">
+				<label class="alcohol_type_label label_percent_drinking_beer" style="" >Beer:</label>
+				<div class="small_slider" id="slider_percent_drinking_beer"></div>
+				<input class="alcohol_type_label_percentage"  id="value_percent_drinking_beer" type='number' step="0.5">
+				<label class="gray_percent_symbol">%</label>
+				<div class="lock_container">
+					<img class="unlocked_image" src="static/img/unlocked.png">
+					<img class="locked_image" src="static/img/locked.png">
+				</div>
+			</div>
+			<div class="alcohol_type_slider_container wine_slider_container" style="margin-bottom:-8px;">
+				<label class="alcohol_type_label label_percent_drinking_wine" style="">Wine:</label>
+				<div class="small_slider" id="slider_percent_drinking_wine"></div>
+				<input class="alcohol_type_label_percentage" id="value_percent_drinking_wine" type='number' step="0.5">
+				<label class="gray_percent_symbol">%</label>
+				<div class="lock_container">
+					<img class="unlocked_image" src="static/img/unlocked.png">
+					<img class="locked_image" src="static/img/locked.png">
+				</div>
+			</div>
+
+<!--advanced options-->
+		<label class="advanced_options_toggle_label"><span class="advanced_options_symbol">+</span> advanced options</label>
+		<div class="advanced_options_container">
+			<div>
+				<label class="spirits_to_include_label" style="font-size:10pt; font-weight:bold; margin-top:10px;">Spirits to include:</label>
+				<hr class="bottle_line" style="">
+				<div class="spirits_options_flex_container">
+					{% for spirit in spirits_options %}
+						<div class="spirits_option_container" style="display:inline;">
+							<label style="display:block; margin:auto; margin-bottom:0px; font-size:10pt;">{{spirit}}</label>
+							{% if spirit|string() == 'Gin' or  spirit|string() == 'Vodka' or spirit|string() == 'Whiskey' %}
+								<input class="include_spirits_checkbox" id="include_spirit_{{ spirit }}" type="checkbox" checked style="display:block; margin:auto; margin-bottom:0px;">
+							{% else %}
+								<input class="include_spirits_checkbox" id="include_spirit_{{ spirit }}" type="checkbox" style="display:block; margin:auto; margin-bottom:0px;">
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<br/>
+
+	<!--WINE SPLIT CONTAINER-->
+			<div class="wine_split_slider_container wine_split_container" style="margin-top:10px; margin-bottom:-13px;">
+				<label class="spirits_to_include_label" style="font-size:10pt; font-weight:bold; margin-bottom:2px;">Wine Mix (Red vs. White):</label>
+				<hr class="bottle_line" style="">
+				<div class="alcohol_type_slider_container wine_slider_container" style="margin-bottom:-8px;">
+					<label class="alcohol_type_label label_percent_drinking_wine" style="">Red</label>
+					<div class="wine_mix_slider" id="wine_mix_slider"></div>
+					<label class="alcohol_type_label label_percent_drinking_wine" style="">White</label>
+				</div>
+					<input class="alcohol_type_label_percentage wine_split_label_percentage wine_split_label_percentage_red" id="value_percent_drinking_wine" type='number' step="0.5" style="width:30px;">
+					<label class="gray_percent_symbol">%</label>
+					<label style="opacity:0; width:200px;"></label>
+					<input class="alcohol_type_label_percentage wine_split_label_percentage wine_split_label_percentage_white" id="value_percent_drinking_wine" type='number' step="0.5" style="width:30px;">
+					<label class="gray_percent_symbol">%</label>
+			</div>
+			<br/>
+
+<!--WINE OPTIONS CONTAINER-->
+			<div class="wine_option_container" style="display:inline-block;">
+				<label class="spirits_to_include_label" style="font-size:10pt; font-weight:bold; margin-bottom:2px;">
+					Wine Options:</label>
+				<hr class="bottle_line" style="">
+				<label class="alcohol_type_label label_percent_drinking_wine" style="width:70px; text-align:right; font-weight:bold; font-size:10pt;">
+					Red:</label>
+<!--				<input class="wine_bottle_options_input" id="red_bottle_options" type="number" value="2" max="2" style="width:30px; text-align:center; font-weight:bold; font-size:10pt;">-->
+				{{ form.wineBottleOptionsRed(class='center_text wine_bottle_options_input', id='red_bottle_options')}}
+				<input type="number" step="1" value="0" style="width:50px; text-align:center; opacity:0;">
+				<br/>
+				<label class="alcohol_type_label label_percent_drinking_wine" style="width:70px; text-align:right; font-weight:bold; font-size:10pt;">
+					White:</label>
+<!--				<input id="wine_bottle_options_input white_bottle_options" type="number" value="2" max="2" min="0" style="width:30px; text-align:center; font-weight:bold; font-size:10pt;">-->
+				{{ form.wineBottleOptionsWhite(class='center_text wine_bottle_options_input', id='white_bottle_options')}}
+				<input type="number" step="1" value="0" style="width:50px; text-align:center; opacity:0;">
+			</div>
+
+
+<!--BEER OPTIONS-->
+<!--			<div class="wine_option_container" style="display:inline-block;">-->
+<!--				<label class="spirits_to_include_label" style="font-size:10pt; font-weight:bold; margin-bottom:2px;">-->
+<!--					Beer Options:</label>-->
+<!--				<hr class="bottle_line" style="">-->
+<!--				<label class="alcohol_type_label label_percent_drinking_wine" style="width:70px; text-align:right; font-weight:bold; font-size:10pt;">Beers</label>-->
+<!--				<input type="number" step="1" value="2" style="width:30px; text-align:center; font-weight:bold; font-size:10pt;">-->
+<!--				<input type="number" step="1" value="2" style="width:50px; text-align:center; opacity:0;">-->
+<!--				<br/>-->
+<!--				<label class="alcohol_type_label label_percent_drinking_wine" style="width:70px; text-align:right; font-weight:bold; font-size:10pt;"></label>-->
+<!--				<input type="number" step="1" value="2" style="width:30px; text-align:center; font-weight:bold; font-size:10pt; opacity:0;">-->
+<!--				<input type="number" step="1" value="2" style="width:50px; text-align:center; opacity:0;">-->
+<!--				<br/>-->
+<!--			</div>-->
+
+		</div>
+
+{#			<div class="wine_split_slider_container wine_split_container" style="">#}
+{#				<a class="wine_split_label">wine split</a>#}
+{#				<div class="red_white_spilt_wine_slider" style="margin-right: 5px;" id="slider_percent_drinking_wine" list="tickmarks"></div>#}
+{#			</div>		#}
+{#			<div class="wine_split_slider_container wine_split_container" style="">#}
+{#				<a class="wine_split_label">wine split</a>#}
+{#				<label class="alcohol_type_label label_percent_drinking_wine" style="opacity: 0; pointer-events: none;">Wine:</label>#}
+{#				<div class="red_white_spilt_wine_slider" style="margin-right: 5px;" id="slider_percent_drinking_wine" list="tickmarks"></div>#}
+{#				<input class="alcohol_type_label_percentage" id="value_percent_drinking_wine" type='number' step="0.5" style="pointer-events: none;">#}
+{#				<label class="gray_percent_symbol" style="opacity: 0;">%</label>#}
+{#				<div class="lock_container">#}
+{#					<img class="unlocked_image" src="static/img/unlocked.png" style="opacity: 0; pointer-events: none;">#}
+{#					<img class="locked_image" src="static/img/locked.png" style="opacity: 0; pointer-events: none;">#}
+{#				</div>#}
+{#			</div>#}
+{#<datalist id="tickmarks">#}
+{#  <option value="0" label="0%"></option>#}
+{#  <option value="10"></option>#}
+{#  <option value="20"></option>#}
+{#  <option value="30"></option>#}
+{#  <option value="40"></option>#}
+{#  <option value="50" label="50%"></option>#}
+{#  <option value="60"></option>#}
+{#  <option value="70"></option>#}
+{#  <option value="80"></option>#}
+{#  <option value="90"></option>#}
+{#  <option value="100" label="100%"></option>#}
+{#</datalist>#}
+		<br/>
+			<div class="drinking_intensity_container">
+				<p class="bottle-text">5. How much will people drink?</p>
+				<div id="slider_drinking_intensity" ></div>
+				<br/>
+				<div class="drinking_intensity_container_detail drinking_intensity_container_detail_light">
+					<label class="value_drinking_intensity" id="value_drinking_intensity_light"></label><label class="percent_symbol_drinking_intensity" id="percent_symbol_drinking_intensity_light">%</label>
+					<label class="label_drinking_intensity label_drinking_intensity_light">light</label>
+					<label class="label_drinkers" id="label_drinkers_light" style="display:block;">drinkers</label>
+				</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<div class="drinking_intensity_container_detail drinking_intensity_container_detail_average">
+					<label class="value_drinking_intensity" id="value_drinking_intensity_average"></label><label class="percent_symbol_drinking_intensity" id="percent_symbol_drinking_intensity_average">%</label>
+					<label class="label_drinking_intensity label_drinking_intensity_average">average</label>
+					<label class="label_drinkers" id="label_drinkers_average" style="display:block;">drinkers</label>
+				</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<div class="drinking_intensity_container_detail drinking_intensity_container_detail_heavy">
+					<label class="value_drinking_intensity" id="value_drinking_intensity_heavy"></label><label class="percent_symbol_drinking_intensity" id="percent_symbol_drinking_intensity_heavy">%</label>
+					<label class="label_drinking_intensity label_drinking_intensity_heavy">heavy</label>
+					<label class="label_drinkers" id="label_drinkers_heavy" style="display:block;">drinkers</label>
+				</div>
+			</div>
+		</p>
+		<p class="bottle-text" id="having_champagne_toast" style="display: inline">
+			{{ form.havingChampagneToast.label (class='label_custom') }} &nbsp; &nbsp;
+			{{ form.havingChampagneToast (class='checkbox_custom') }}
+		</p>
+		<br/>
+		<p class="bottle-text">
+			<div class="calculate-button btn btn-primary" id="calculate_button" onclick="" tabindex="3" style="cursor:pointer;">
+				Calculate Bar Package
+			</div>
+			<div class="assumptions_container">
+				<a class="show_assumptions" href="#!" style="margin-bottom:5px;">(view assumptions)</a>
+				<br/><br/>
+				<div class="assumptions_data_container">
+					<p class="assumptions_label">- Servings Calculation -</p>
+					<p class="assumptions_label">light drinkers: guests * hours</p>
+					<p class="assumptions_label">average drinkers: guests * (hours + 1)</p>
+					<p class="assumptions_label">heavy drinkers: guests * (hours + 2)</p>
+					<br/>
+					<p class="assumptions_label">- Servings per bottle -</p>
+					<p class="assumptions_label">champagne: 6</p>
+					<p class="assumptions_label">spirits: 16</p>
+					<p class="assumptions_label">beer: 1</p>
+					<p class="assumptions_label">wine: 5</p>
+					<br/>
+					<p class="assumptions_label">When converting servings to bottles, numbers are rounded up.</p>
+				</div>
+			</div> {# closes assumptions container #}
+		<!--{#	<p class="text-muted" style="font-size: 8pt; margin-top: -10pt;">&copy; Pernod Ricard 2020</p>#}-->
+		</p>
+	</form>
+
+
+
+	<hr>
+
+	<div class="loader" style="display:none;"></div>
+
+	{#Summary section#}
+	<div class="calculation-result" name="calculation-result" id="calculation-result">
+		<div class="summary_container">
+			<p id='summary_title' >Based on your needs, we recommend</p>
+			 <hr height=5  width=300 style="margin:auto; margin-bottom:1px; margin-top:5px;"/>
+
+			<div id="champagne_data_container" style="display: none;">
+				<label class="summary_label summary_label_bold">Champagne:</label>&nbsp;
+				<label class="summary_label summary_label_bold summary_value_champagne_bottles">200</label>
+				<label class="summary_label summary_label_bold"> bottles </label>
+				<label class="summary_label summary_label_gray">/</label>
+				<label class="summary_label summary_value_champagne summary_label_gray">200</label>
+				<label class="summary_label summary_label_gray"> drinks</label>
+
+			</div>
+			<label class="summary_label summary_label_bold">Wine:</label>&nbsp;
+			<label class="summary_label summary_value_wine_bottles summary_label_bold">200</label>
+			<label class="summary_label summary_label_bold"> bottles </label>
+			<label class="summary_label summary_label_gray">/</label>
+			<label class="summary_label summary_value_wine summary_label_gray">200</label>
+			<label class="summary_label summary_label_gray">glasses</label>
+
+			<br/>
+			<label class="summary_label summary_label_bold">Spirits:</label>&nbsp;
+			<label class="summary_label summary_label_bold summary_value_spirits_bottles">200</label>
+			<label class="summary_label summary_label_bold"> bottles </label>
+			<label class="summary_label summary_label_gray">/</label>
+			<label class="summary_label summary_value_spirits summary_label_gray">200</label>
+			<label class="summary_label summary_label_gray">cocktails</label>
+
+			<br/>
+			<label class="summary_label summary_label_bold">Beer:</label>&nbsp;
+			<label class="summary_label summary_label_bold summary_value_beer_bottles">200</label>
+			<label class="summary_label summary_label_bold"> bottles </label>
+			<label class="summary_label summary_label_gray">/</label>
+			<label class="summary_label summary_value_beer summary_label_gray">200</label>
+			<label class="summary_label summary_label_gray">glasses</label>
+			<br/>
+			<label class="summary_label summary_label_total_drinks" id="total_drinks_needed">Total Servings Needed:</label>&nbsp;
+			<label class="summary_label summary_label_total_drinks summary_value_all">200</label>
+			<label class="summary_label summary_label_total_drinks">drinks</label>
+			<br/>
+		</div>
+           {#	Calculator Resultas#}
+		<br/>
+		<div class="buy_now_container" style="align-items:center; ">
+			<button type="button" class="btn btn-primary buy_reserve_bar_link">Buy Spirits - ReserveBar</button>
+			<button type="button" class="btn btn-primary buy_drinksandco_link">Buy Wine - Drinks & Co</button>
+		</div>
+		<a class="calculateCocktails" href='#!' style="display:block; width:170px; text-align:center; margin:auto; margin-bottom:15px;margin-top:5px;">(view cocktails)</a>
+		<div class="flex_container_calculation_result">
+			{% for bottle in bottles %}
+				<div class="brand_container brand_container_{{ bottle.class_name }} brand_container_{{ bottle.type }}_{{ bottle.category_order }} brand_container_{{ bottle.type }}" style="position:relative;">
+					<img src="/static/img/{{ bottle.image_path }}"  style="margin-bottom:7px;" height=200px >
+					<img class="prev_arrow prev_arrow_{{ bottle.class_name }} prev_arrow_{{ bottle.type }}_{{ bottle.category_order }}" src="static/img/prev_arrow.png">
+					<img class="next_arrow next_arrow_{{ bottle.class_name }} next_arrow_{{ bottle.type }}_{{ bottle.category_order }}" src="static/img/next_arrow.png">
+					<hr class="bottle_line">
+					<p class="brand_title">{{ bottle.title }} {{ bottle.type }}</p>
+						<div class="price_container" style="display:block;">
+							<p class="price_label" id="price_label_{{ bottle.class_name }}" style="display:inline;"></p>
+							<label class="price_label" style="display:inline;">/ each</label>
+						</div>
+					<p class="bottle_count_label" id="bottle_count_label_{{ bottle.class_name }}">15 bottles </p>
+					<p class="category_type" style="display: none;">{{ bottle.type }}</p>
+					<p class="category_position" style="display: none;">{{ bottle.category_order }}</p>
+					<p class="reservebar_id" style="display: none;">{{ bottle.reservebar_id }}</p>
+					<p class="drinksandco_id" style="display: none;">{{ bottle.drinksandco_id }}</p>
+					<p></p>
+					<p class="category_order_value" id="category_order_value_{{ bottle.class_name }}" style="display: none;">{{ bottle.category_order }}</p>
+					{#Cocktail picture#}
+					{% if bottle.cocktail_title is defined %}
+						<div class="cocktail_image_container">
+							<img class="cocktail_image" src="static/img/{{ bottle.cocktail_image_path }}" >
+							<hr class="cocktail_line">
+							<p class="cocktail_title">{{ bottle.cocktail_title }}</p>
+							<p class="cocktail_description">{{ bottle.cocktail_description }}</p>
+						</div>
+					{%  endif %}
+				</div>
+			{% endfor %}
+		</div> {#  //FLEX container close  #}
+		<br>
+		<div id="variable" style="display:none;">{{ bottles }}</div>
+		<div id="variable_spirits" style="display:none;">{{ spirits_options }}</div>
+		<br><br>
+</div> {# CALC RESULT #}
+<br/><br/><br/>
+
+{% endblock %}
+
+
+
+
+
+{#Example of basic fetch#}
+{#fetch('https://dog.ceo/api/breeds/image/random')#}
+{#  .then(response => response.json())#}
+{#  .then(data => console.log(data.message))#}
+
+
+{#			<div>#}
+{#				<label style="font-size: 10pt; color:#0000EE;">show/hide suggestions</label>#}
+{#				<div class="preset_container">#}
+{#					<p class="preset" style="border: 1px solid black">Bachelorette Party</p>#}
+{#					<p class="preset" style="border: 1px solid black">Bachelor Party</p>#}
+{#					<p class="preset" style="border: 1px solid black">Wedding</p>#}
+{#					<p class="preset" style="border: 1px solid black">Game Watch</p>#}
+{#					<p class="preset" style="border: 1px solid black">Work Happy Hour</p>#}
+{#					<p class="preset" style="border: 1px solid black">Holiday Party</p>#}
+{#					<p class="preset" style="border: 1px solid black">Brunch</p>#}
+{#				</div>#}
+{#			</div>#}

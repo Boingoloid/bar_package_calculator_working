@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="addf09e6-e5e0-4f89-b17c-dd1e97676a21" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/Flask_Cors-3.0.8.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/Flask_Cors-3.0.8.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/Flask_Cors-3.0.8.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/Flask_Cors-3.0.8.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/Flask_Cors-3.0.8.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/Flask_Cors-3.0.8.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/flask_cors/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/flask_cors/core.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/flask_cors/decorator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/flask_cors/extension.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/flask_cors/version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/six-1.14.0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/six-1.14.0.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/six-1.14.0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/six-1.14.0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/six-1.14.0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/six-1.14.0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/six.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/js/js.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/js.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/calculator-entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/calculator-entry.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1WMlJpnjb5bhRkP6D6EAu5TKmNr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/static" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.drink_calculator">
+    <configuration name="calculator-entry.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/drink_calculator/app/templates/calculator-entry.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="drink_calculator" type="PythonConfigurationType" factoryName="Python">
+      <module name="drink_calculator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="addf09e6-e5e0-4f89-b17c-dd1e97676a21" name="Default Changelist" comment="" />
+      <created>1578967275406</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578967275406</updated>
+      <workItem from="1578967276650" duration="3335000" />
+      <workItem from="1578978682021" duration="48984000" />
+      <workItem from="1579303236417" duration="962000" />
+      <workItem from="1579304325202" duration="397000" />
+      <workItem from="1579305231143" duration="121359000" />
+      <workItem from="1580098548510" duration="170756000" />
+      <workItem from="1580786161825" duration="1418000" />
+      <workItem from="1580787974167" duration="1789000" />
+      <workItem from="1580789782021" duration="1186000" />
+      <workItem from="1580791732931" duration="1779000" />
+      <workItem from="1580793541464" duration="1741000" />
+      <workItem from="1580795350522" duration="1628000" />
+      <workItem from="1580839509227" duration="1651000" />
+      <workItem from="1580841354948" duration="2208000" />
+      <workItem from="1580844617227" duration="1214000" />
+      <workItem from="1580860264606" duration="1761000" />
+      <workItem from="1580864024980" duration="1807000" />
+      <workItem from="1580866061350" duration="1222000" />
+      <workItem from="1580869879890" duration="1643000" />
+      <workItem from="1580871881509" duration="989000" />
+      <workItem from="1580925222340" duration="866000" />
+      <workItem from="1580933014980" duration="1631000" />
+      <workItem from="1580935750191" duration="1775000" />
+      <workItem from="1580937879888" duration="1745000" />
+      <workItem from="1580939709845" duration="1761000" />
+      <workItem from="1580942127313" duration="1716000" />
+      <workItem from="1580943942748" duration="1907000" />
+      <workItem from="1580946158636" duration="1888000" />
+      <workItem from="1580948782652" duration="1741000" />
+      <workItem from="1580950613737" duration="1491000" />
+      <workItem from="1580952426103" duration="1631000" />
+      <workItem from="1580957237595" duration="1770000" />
+      <workItem from="1580959114012" duration="1277000" />
+      <workItem from="1580960706471" duration="1752000" />
+      <workItem from="1580962525981" duration="1902000" />
+      <workItem from="1580965062727" duration="1761000" />
+      <workItem from="1580967011880" duration="1625000" />
+      <workItem from="1580968822721" duration="1203000" />
+      <workItem from="1581015550909" duration="1855000" />
+      <workItem from="1581020197580" duration="721000" />
+      <workItem from="1581022865771" duration="898000" />
+      <workItem from="1581446672940" duration="741000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="7" y="171" key="#Inspections" timestamp="1580251573131">
+      <screen x="0" y="23" width="1792" height="1026" />
+    </state>
+    <state x="7" y="171" key="#Inspections/0.23.1792.1026@0.23.1792.1026" timestamp="1580251573131" />
+    <state x="0" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582610420062">
+      <screen x="0" y="23" width="1792" height="1030" />
+    </state>
+    <state x="0" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1582610420062" />
+    <state x="897" y="330" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578980702278">
+      <screen x="0" y="23" width="1792" height="1026" />
+    </state>
+    <state x="897" y="330" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1026@0.23.1792.1026" timestamp="1578980702278" />
+    <state x="0" y="108" key="CommitChangelistDialog2" timestamp="1580842762827">
+      <screen x="0" y="23" width="1792" height="1030" />
+    </state>
+    <state x="0" y="108" key="CommitChangelistDialog2/0.23.1792.1026@0.23.1792.1026" timestamp="1580277327805" />
+    <state x="0" y="108" key="CommitChangelistDialog2/0.23.1792.1030@0.23.1792.1030" timestamp="1580842762827" />
+    <state width="1209" height="332" key="GridCell.Tab.0.bottom" timestamp="1582758945518">
+      <screen x="0" y="23" width="1792" height="1028" />
+    </state>
+    <state width="1209" height="269" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1581826811171" />
+    <state width="1209" height="332" key="GridCell.Tab.0.bottom/0.23.1792.1028@0.23.1792.1028" timestamp="1582758945518" />
+    <state width="1209" height="332" key="GridCell.Tab.0.bottom/0.23.1792.1030@0.23.1792.1030" timestamp="1582645082497" />
+    <state width="1192" height="329" key="GridCell.Tab.0.bottom/0.23.1792.1031@0.23.1792.1031" timestamp="1580925197720" />
+    <state width="1209" height="332" key="GridCell.Tab.0.center" timestamp="1582758945517">
+      <screen x="0" y="23" width="1792" height="1028" />
+    </state>
+    <state width="1209" height="269" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1581826811170" />
+    <state width="1209" height="332" key="GridCell.Tab.0.center/0.23.1792.1028@0.23.1792.1028" timestamp="1582758945517" />
+    <state width="1209" height="332" key="GridCell.Tab.0.center/0.23.1792.1030@0.23.1792.1030" timestamp="1582645082497" />
+    <state width="1192" height="329" key="GridCell.Tab.0.center/0.23.1792.1031@0.23.1792.1031" timestamp="1580925197719" />
+    <state width="1209" height="332" key="GridCell.Tab.0.left" timestamp="1582758945517">
+      <screen x="0" y="23" width="1792" height="1028" />
+    </state>
+    <state width="1209" height="269" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1581826811169" />
+    <state width="1209" height="332" key="GridCell.Tab.0.left/0.23.1792.1028@0.23.1792.1028" timestamp="1582758945517" />
+    <state width="1209" height="332" key="GridCell.Tab.0.left/0.23.1792.1030@0.23.1792.1030" timestamp="1582645082496" />
+    <state width="1192" height="329" key="GridCell.Tab.0.left/0.23.1792.1031@0.23.1792.1031" timestamp="1580925197719" />
+    <state width="1209" height="332" key="GridCell.Tab.0.right" timestamp="1582758945517">
+      <screen x="0" y="23" width="1792" height="1028" />
+    </state>
+    <state width="1209" height="269" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1581826811170" />
+    <state width="1209" height="332" key="GridCell.Tab.0.right/0.23.1792.1028@0.23.1792.1028" timestamp="1582758945517" />
+    <state width="1209" height="332" key="GridCell.Tab.0.right/0.23.1792.1030@0.23.1792.1030" timestamp="1582645082497" />
+    <state width="1192" height="329" key="GridCell.Tab.0.right/0.23.1792.1031@0.23.1792.1031" timestamp="1580925197719" />
+    <state width="1209" height="332" key="GridCell.Tab.1.bottom" timestamp="1582758945518">
+      <screen x="0" y="23" width="1792" height="1028" />
+    </state>
+    <state width="1209" height="332" key="GridCell.Tab.1.bottom/0.23.1792.1028@0.23.1792.1028" timestamp="1582758945518" />
+    <state width="1209" height="332" key="GridCell.Tab.1.bottom/0.23.1792.1030@0.23.1792.1030" timestamp="1582645082498" />
+    <state width="1209" height="332" key="GridCell.Tab.1.center" timestamp="1582758945518">
+      <screen x="0" y="23" width="1792" height="1028" />
+    </state>
+    <state width="1209" height="332" key="GridCell.Tab.1.center/0.23.1792.1028@0.23.1792.1028" timestamp="1582758945518" />
+    <state width="1209" height="332" key="GridCell.Tab.1.center/0.23.1792.1030@0.23.1792.1030" timestamp="1582645082498" />
+    <state width="1209" height="332" key="GridCell.Tab.1.left" timestamp="1582758945518">
+      <screen x="0" y="23" width="1792" height="1028" />
+    </state>
+    <state width="1209" height="332" key="GridCell.Tab.1.left/0.23.1792.1028@0.23.1792.1028" timestamp="1582758945518" />
+    <state width="1209" height="332" key="GridCell.Tab.1.left/0.23.1792.1030@0.23.1792.1030" timestamp="1582645082498" />
+    <state width="1209" height="332" key="GridCell.Tab.1.right" timestamp="1582758945518">
+      <screen x="0" y="23" width="1792" height="1028" />
+    </state>
+    <state width="1209" height="332" key="GridCell.Tab.1.right/0.23.1792.1028@0.23.1792.1028" timestamp="1582758945518" />
+    <state width="1209" height="332" key="GridCell.Tab.1.right/0.23.1792.1030@0.23.1792.1030" timestamp="1582645082498" />
+    <state x="679" y="160" key="SettingsEditor" timestamp="1580866095526">
+      <screen x="0" y="23" width="1792" height="1031" />
+    </state>
+    <state x="679" y="159" key="SettingsEditor/0.23.1792.1026@0.23.1792.1026" timestamp="1579122939968" />
+    <state x="679" y="160" key="SettingsEditor/0.23.1792.1031@0.23.1792.1031" timestamp="1580866095526" />
+    <state x="855" y="353" key="com.intellij.ide.util.TipDialog" timestamp="1582585613928">
+      <screen x="0" y="23" width="1792" height="1030" />
+    </state>
+    <state x="855" y="352" key="com.intellij.ide.util.TipDialog/0.23.1792.1026@0.23.1792.1026" timestamp="1581751791542" />
+    <state x="855" y="353" key="com.intellij.ide.util.TipDialog/0.23.1792.1028@0.23.1792.1028" timestamp="1581022873319" />
+    <state x="855" y="353" key="com.intellij.ide.util.TipDialog/0.23.1792.1030@0.23.1792.1030" timestamp="1582585613928" />
+    <state x="855" y="352" key="com.intellij.ide.util.TipDialog/0.23.1792.1031@0.23.1792.1031" timestamp="1581015555738" />
+    <state x="855" y="353" key="com.intellij.ide.util.TipDialog/0.23.1792.1033@0.23.1792.1033" timestamp="1580968825475" />
+    <state x="855" y="353" key="com.intellij.ide.util.TipDialog/0.23.1792.1034@0.23.1792.1034" timestamp="1580946223843" />
+    <state x="789" y="142" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579212443841">
+      <screen x="0" y="23" width="1792" height="1026" />
+    </state>
+    <state x="789" y="142" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1792.1026@0.23.1792.1026" timestamp="1579212443841" />
+    <state x="953" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581833935838">
+      <screen x="0" y="23" width="1792" height="1026" />
+    </state>
+    <state x="953" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1026@0.23.1792.1026" timestamp="1581833935838" />
+    <state x="0" y="23" width="865" height="976" key="dock-window-1" timestamp="1582758987834">
+      <screen x="0" y="23" width="1792" height="1028" />
+    </state>
+    <state x="0" y="23" width="865" height="973" key="dock-window-1/0.23.1792.1026@0.23.1792.1026" timestamp="1581751793975" />
+    <state x="0" y="23" width="865" height="976" key="dock-window-1/0.23.1792.1028@0.23.1792.1028" timestamp="1582758987834" />
+    <state x="0" y="23" width="865" height="977" key="dock-window-1/0.23.1792.1030@0.23.1792.1030" timestamp="1582476035570" />
+    <state x="0" y="23" width="981" height="977" key="dock-window-1/0.23.1792.1031@0.23.1792.1031" timestamp="1582169870594" />
+    <state x="0" y="23" width="1035" height="973" key="dock-window-1/0.23.1792.1033@0.23.1792.1033" timestamp="1580854281402" />
+    <state x="59" y="23" width="755" height="965" key="dock-window-2" timestamp="1581446714100">
+      <screen x="0" y="23" width="1792" height="1026" />
+    </state>
+    <state x="59" y="23" width="755" height="965" key="dock-window-2/0.23.1792.1026@0.23.1792.1026" timestamp="1581446714100" />
+    <state x="0" y="23" width="893" height="966" key="dock-window-2/0.23.1792.1028@0.23.1792.1028" timestamp="1581022981957" />
+    <state x="59" y="23" width="756" height="965" key="dock-window-2/0.23.1792.1031@0.23.1792.1031" timestamp="1581015573780" />
+    <state x="31" y="28" width="893" height="971" key="dock-window-2/0.23.1792.1033@0.23.1792.1033" timestamp="1580968857198" />
+    <state x="145" y="28" width="893" height="971" key="dock-window-2/0.23.1792.1034@0.23.1792.1034" timestamp="1580946225407" />
+    <state x="725" y="107" width="837" height="827" key="find.popup" timestamp="1582680107419">
+      <screen x="0" y="23" width="1792" height="1028" />
+    </state>
+    <state x="725" y="107" width="837" height="825" key="find.popup/0.23.1792.1026@0.23.1792.1026" timestamp="1581719278055" />
+    <state x="725" y="107" width="837" height="827" key="find.popup/0.23.1792.1028@0.23.1792.1028" timestamp="1582680107419" />
+    <state x="799" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1581962014106">
+      <screen x="0" y="23" width="1792" height="1026" />
+    </state>
+    <state x="799" y="244" width="670" height="676" key="search.everywhere.popup/0.23.1792.1026@0.23.1792.1026" timestamp="1581962014106" />
+    <state x="799" y="244" width="670" height="678" key="search.everywhere.popup/0.23.1792.1028@0.23.1792.1028" timestamp="1579820438050" />
+    <state x="799" y="246" width="670" height="681" key="search.everywhere.popup/0.23.1792.1033@0.23.1792.1033" timestamp="1580962890143" />
+  </component>
+</project>

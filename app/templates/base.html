@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+		<!-- JQuery-ui + theme and Base CSS -->	
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+		<link rel="stylesheet" href=" {{ url_for('static', filename='css/base.css') }}">
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<!-- Tag for mattacalindemo.com-->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7513WV3G7W"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-7513WV3G7W');
+		</script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<!-- Tag for barpackagecalculator.com-->	
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158286608-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-158286608-1');
+		</script>
+
+		<title>Bar Calculator</title>
+		<link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    </head>
+    
+	<body>
+    	{% block content %}{% endblock %}
+		<!-- Optional JavaScript -->
+		<!-- ajax + jquerry ui-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'></script>	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<!-- bootstrap -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+		<!-- static js -->
+		<script type="text/javascript" src=" {{ url_for('static', filename='js/js.js') }}"></script>
+		<script type="text/javascript" src=" {{ url_for('static', filename='js/sliders.js') }}"></script>
+
+		<script type="text/javascript" src="https://s.skimresources.com/js/148757X1613896.skimlinks.js"></script>
+    </body>
+
+	</html>

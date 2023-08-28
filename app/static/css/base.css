@@ -1,0 +1,671 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  display: block;  
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.bottle-text{
+    /*color:#393864;*/
+    text-align: center;
+    font-weight: bold;
+}
+
+.center_text{
+    text-align: center;
+}
+
+.guests_label{
+    display: inline;
+}
+
+#guest_input{
+    width:60px;
+    display: inline;
+}
+
+#duration_input{
+    width:60px;
+}
+
+
+#slider_percent_drinking{
+    width:160px;
+    margin: auto;
+    margin-bottom:-3px;
+    display: inline-block;
+}
+
+/* #value_percent_drinking{
+
+} */
+
+#alcohol_drinkers_label{
+    margin-left:-4px;
+    pointer-events: none;
+}
+
+
+
+.spirits_options_flex_container{
+    display:flex;
+    flex-wrap:wrap;
+    margin:auto;
+    justify-content:center;
+}
+
+
+
+.spirits_option_container{
+    display:inline;
+    width:70px;
+}
+
+.calculation-result {
+    text-align: center;
+    display:none;
+}
+
+
+.cocktail_image_container{
+    padding:5px;
+    width:100%;
+    text-align: center;
+    display: none;
+}
+
+.cocktail_image{
+    margin-bottom:7px;
+    width:35%;
+    padding-top:10px;
+
+}
+
+.cocktail_title {
+    font-size:10pt;
+    font-weight: bold;
+    margin-bottom:5px;
+}
+
+.cocktail_description {
+    font-size:8pt;
+}
+
+
+
+.brand_container {
+    width:200px;
+    padding:5px;
+}
+
+.brand_title{
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.bottle_count_label{
+    margin-top:5px;
+    margin-bottom:5px;
+    font-size:10pt;
+}
+.price_label{
+    font-size:10pt;
+    margin-bottom:5px;
+}
+
+.flex_container_calculation_result{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.bottle_line{
+    margin-top:0px;
+    margin-bottom:0px;
+    width: 150px;
+}
+
+.cocktail_line{
+    margin-top:5px;
+    margin-bottom:5px;
+    width: 150px;
+}
+
+.loader {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 0.5s linear infinite;
+    text-align: center;
+    margin:auto;
+    /*position: absolute;*/
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*input[type=checkbox] {*/
+/*    width:100px;*/
+/*    height:100px;*/
+/*}*/
+
+.checkbox_custom {
+    transform: scale(1.1);
+    margin-bottom:10px;
+
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+
+.alcohol_type_slider_container{
+    vertical-align: bottom;
+}
+
+
+
+.percent_drinking_label_percentage{
+    font-size: 11pt;
+    width: 30px;
+    display: inline-block;
+    color: gray;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    text-align: right;
+    margin-bottom:-2px;
+    pointer-events: none;
+
+}
+
+
+
+
+#event_type_dropdown{
+    border-radius: 0px;
+    cursor: pointer
+}
+
+
+.small_slider{
+    margin: auto;
+    margin-bottom:-1.5px;
+    display: inline-block;
+    width: 200px;
+}
+
+
+.wine_mix_slider{
+    margin: auto;
+    margin-bottom:-1.5px;
+    display: inline-block;
+    width: 200px;
+}
+
+.label_drinking_type{
+   font-weight:bold;
+}
+
+.alcohol_type_label{
+    font-size: 11pt;
+    width: 45px;
+    display: inline-block;
+}
+
+.alcohol_type_label_percentage {
+    font-size: 11pt;
+    width: 40px;
+    display: inline-block;
+    color: gray;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    text-align: right;
+    margin-bottom:-2px;
+    pointer-events: none;
+
+}
+
+.gray_percent_symbol{
+    color:gray;
+    font-size:11pt;
+    margin-left:-2px;
+}
+
+/* .percent_symbol_drinking_intensity{
+ */
+}
+
+.preset_container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    font-size:10pt;
+    width: 80%;
+    margin:auto;
+}
+
+
+.preset{
+    width:180px;
+    vertical-align: middle;
+    background: lightgray;
+    line-height: 20px;
+    /* Internet Explorer 10 */
+    display:-ms-flexbox;
+    -ms-flex-pack:center;
+    -ms-flex-align:center;
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    /* Safari, Opera, and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+    /* W3C */
+    display:box;
+    box-pack:center;
+    box-align:center;
+    height:35px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-bottom: 5px;
+}
+.preset:hover{
+    background: white;
+    cursor: pointer;
+}
+
+/*.small_slider .ui-slider-range{*/
+/*    color: orange;*/
+/*  }*/
+
+
+.unlocked_image, .locked_image{
+    margin-top:-2px;
+    padding:7px;
+    cursor:pointer;
+    display: inline;
+}
+
+.locked_image{
+    display:none;
+
+}
+
+.lock_container{
+    height:22px;
+    width:22px;
+    display: inline;
+}
+
+#slider_drinking_intensity{
+    margin: auto;
+    margin-bottom:0px;
+    display: inline-block;
+    width: 200px;
+    background-image: linear-gradient(to right, #82b6c7fc, #003168);
+}
+
+.ui-state-active, .ui-widget-content, .ui-state-active, .ui-widget-header, .ui-state-active {
+    /*color:blue;*/
+    cursor:pointer;
+
+}
+
+.ui-slider-handle:hover, .ui-state-default, .ui-state-active{
+    cursor: pointer;
+}
+
+.ui-slider-handle::after{
+    background-color:red;
+}
+
+.ui-slider-range{
+    background:white;
+}
+
+
+.advanced_options_toggle_label{
+    font-size:10pt;
+    color:hsl(212, 100%, 20%);
+    margin-right:200px;
+
+}
+
+.advanced_options_container{
+    display:none;
+    background:#E8E8E8;
+}
+
+
+/* #wine_split_dropdown{
+} */
+
+
+
+.red_white_spilt_wine_slider{
+    margin: auto;
+    margin-bottom:-1.5px;
+    display: inline-block;
+    width: 200px;
+}
+
+.wine_split_label{
+    margin: auto;
+    color:gray;
+    font-size: 8pt;
+    display: block;
+    margin-bottom: -8px;
+}
+
+/* .red_white_spilt_wine_slider{ */
+
+}
+
+.red_white_spilt_wine_slider .ui-slider-handle {
+    width:.5em;
+    margin-left: -.2em;
+    /*top:-.7em;*/
+
+            /*url(img/slider-handle.png) no-repeat;*/
+}
+
+.red_white_spilt_wine_slider.ui-slider-horizontal{
+    height:.2em;
+
+}
+
+.wine_bottle_options_input{
+    font-size:10pt;
+}
+
+
+/*.red_white_spilt_wine_slider.ui-slider*/
+
+.label_drinking_intensity_heavy, #value_drinking_intensity_heavy, #percent_symbol_drinking_intensity_heavy, #label_drinkers_heavy{
+    color:#003168;
+    margin-bottom:0px;
+}
+
+.label_drinking_intensity_average, #value_drinking_intensity_average, #percent_symbol_drinking_intensity_average, #label_drinkers_average{
+    margin-bottom:0px;
+}
+
+.label_drinking_intensity_light, #value_drinking_intensity_light, #percent_symbol_drinking_intensity_light, #label_drinkers_light{
+    color:#82b6c7fc;
+    margin-bottom:0px;
+}
+
+
+.label_drinking_intensity{
+    display: block;
+    align-items:center;
+}
+
+.drinking_intensity_container {
+    display: block;
+}
+
+.drinking_intensity_container_detail{
+    display:inline-block;
+    font-size: 10pt;
+    align-items:center;
+}
+
+.show_assumptions{
+    display:none;
+    text-align:center;
+    margin:auto;
+    margin-bottom:15px;
+    color: gray;
+    font-size:10pt;
+}
+
+.calculateCocktails{
+    display:block;
+    text-align:center;
+    margin:auto;
+    margin-bottom:15px;
+    color: gray;
+    font-size:10pt;
+}
+
+.assumptions_data_container{
+    /*text-align:left;*/
+    width:300px;
+    margin:auto;
+    display: none;
+}
+
+.assumptions_label{
+    font-size:10pt;
+    color:gray;
+    margin-bottom:0px;
+}
+
+#calculate_button{
+    background-color:#003168;
+    border-color:#003168;
+    cursor:pointer;
+}
+
+.summary_container{
+    margin:auto;
+}
+
+.summary_label{
+    margin-bottom:0px;
+    font-size: 12pt;
+}
+
+.summary_label_total_drinks{
+    color:gray;
+    font-size: 10pt;
+
+}
+
+.summary_label_bold{
+    font-weight:bold;
+    font-size:14pt;
+}
+
+.summary_label_gray{
+    color:gray;
+    font-size:10pt;
+}
+
+#summary_title{
+    margin:auto;
+    font-size: 18pt;
+    margin-bottom:5px;
+    font-weight: bold;
+}
+
+.buy_reserve_bar_link, .buy_drinksandco_link{
+    background-color:#003168;
+}
+
+.next_arrow, .prev_arrow{
+    cursor:pointer;
+    padding:5px;
+    position: absolute;
+    width:34px;
+    top:185px;
+    display: none;
+}
+
+.next_arrow {
+    right: 25px;
+}
+
+.prev_arrow{
+    left:25px;
+}
+
+
+#list-builder {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    filter: alpha(opacity=80);
+	opacity: 0.8;
+    display: none;
+    z-index:5;
+}
+
+#popup-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #911e26;
+    color: #FFFFFF;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border: 10px solid #FFFFFF;
+    display: none;
+    z-index: 5;
+}
+
+#popup-close {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    cursor: pointer;
+    width: 40px;
+}
+
+#popup-box h1 {
+    margin: 0;
+}
+
+#popup-box form {
+    margin-bottom: 0px;
+}
+
+#popup-box input {
+    padding: 10px;
+    border: 1px solid #333;
+    width: 40%;
+}
+
+#popup-box button {
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+
+
+/*
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+*/
