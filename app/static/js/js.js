@@ -106,22 +106,20 @@ $(document).ready(function() {
     var drinksWhiteWine = drinksWine * whiteWineSplit;
     var drinksRedWine = drinksWine * redWineSplit;
 
-    // Get number of bottle options
-    var numberOfWineOptionsRed = $('#red_bottle_options').val();
-    var numberOfWineOptionsWhite =  $('#white_bottle_options').val();
+    // // Get number of bottle options
+    // var numberOfWineOptionsRed = $('#red_bottle_options').val();
+    // var numberOfWineOptionsWhite =  $('#white_bottle_options').val();
 
     var bottlesWhiteWine = Math.ceil(drinksWhiteWine / wineDrinksPerBottle);
     var bottlesRedWine = Math.ceil(drinksRedWine / wineDrinksPerBottle);
-    var bottlesPerWhiteWine = Math.ceil(bottlesWhiteWine / numberOfWineOptionsWhite);
-    var bottlesPerRedWine = Math.ceil(bottlesRedWine / numberOfWineOptionsRed);
+    var bottlesPerWhiteWine = Math.ceil(bottlesWhiteWine);
+    var bottlesPerRedWine = Math.ceil(bottlesRedWine);
 
-    console.log('bottles:');
-    console.log('White options' + numberOfWineOptionsWhite);
-    console.log('Red Options' + numberOfWineOptionsRed);
-    console.log('bottles white' + bottlesWhiteWine);
-    console.log('bottles red' + bottlesRedWine);
-    console.log(bottlesPerWhiteWine);
-    console.log(bottlesPerRedWine);
+    // console.log('bottles:');
+    // console.log('bottles white' + bottlesWhiteWine);
+    // console.log('bottles red' + bottlesRedWine);
+    // console.log(bottlesPerWhiteWine);
+    // console.log(bottlesPerRedWine);
 
     //
     var drinksSpirits = Math.ceil(totalDrinks * percentageSpirits);
@@ -183,7 +181,7 @@ $(document).ready(function() {
         checkbox_spirit_type = checkbox_spirit_type.replace("include_spirit_","");
         $('.brand_container_' + checkbox_spirit_type).hide();
         console.log('checked id: ' + checkbox_spirit_type);
-        console.log('hit');
+        
 
     });
     hideLoader();
@@ -329,6 +327,17 @@ function showCocktails (){
 }
 
 //////////////////////////  ReserveBar and Drinks & Co API
+
+$('.buy_now_reserve_bar_link').click(function(){
+    window.open("//www.reservebar.com",target="_blank");
+    return false;
+});
+
+$('.buy_now_total_wine_link').click(function(){
+    window.open("//www.totalwine.com/",target="_blank");
+    return false;
+});
+
 
 $('.buy_reserve_bar_link').click(function(){
     buildURL();

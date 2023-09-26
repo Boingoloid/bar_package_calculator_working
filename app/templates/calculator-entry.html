@@ -277,21 +277,32 @@
            {#	Calculator Resultas#}
 		<br/>
 		<div class="buy_now_container" style="align-items:center; ">
+			<button type="button" class="btn btn-primary buy_now_reserve_bar_link">Buy @ Reserve Bar</button>
+			<button type="button" class="btn btn-primary buy_now_total_wine_link">Buy @ Total Wine</button>
+			<!--
 			<button type="button" class="btn btn-primary buy_reserve_bar_link">Buy Spirits - ReserveBar</button>
 			<button type="button" class="btn btn-primary buy_drinksandco_link">Buy Wine - Drinks & Co</button>
+			-->
+			<br/>
+			<br/>
 		</div>
-		<a class="calculateCocktails" href='#!' style="display:block; width:170px; text-align:center; margin:auto; margin-bottom:15px;margin-top:5px;">(view cocktails)</a>
+		<!--
+		<a class="calculateCocktails" href='#!' style="display:block; width:170px; text-align:center; margin:auto; margin-bottom:15px;margin-top:5px;">
+			(view cocktails)
+		</a>
+		-->
 		<div class="flex_container_calculation_result">
 			{% for bottle in bottles %}
 				<div class="brand_container brand_container_{{ bottle.class_name }} brand_container_{{ bottle.type }}_{{ bottle.category_order }} brand_container_{{ bottle.type }}" style="position:relative;">
 					<img src="/static/img/{{ bottle.image_path }}"  style="margin-bottom:7px;" height=200px >
+					<!--
 					<img class="prev_arrow prev_arrow_{{ bottle.class_name }} prev_arrow_{{ bottle.type }}_{{ bottle.category_order }}" src="static/img/prev_arrow.png">
 					<img class="next_arrow next_arrow_{{ bottle.class_name }} next_arrow_{{ bottle.type }}_{{ bottle.category_order }}" src="static/img/next_arrow.png">
+					-->
 					<hr class="bottle_line">
-					<p class="brand_title">{{ bottle.title }} {{ bottle.type }}</p>
+					<p class="brand_title">{{ bottle.type }}</p>
 						<div class="price_container" style="display:block;">
 							<p class="price_label" id="price_label_{{ bottle.class_name }}" style="display:inline;"></p>
-							<label class="price_label" style="display:inline;">/ each</label>
 						</div>
 					<p class="bottle_count_label" id="bottle_count_label_{{ bottle.class_name }}">15 bottles </p>
 					<p class="category_type" style="display: none;">{{ bottle.type }}</p>

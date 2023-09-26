@@ -193,21 +193,6 @@ bottles = [
             "reservebar_handle": "https://www.reservebar.com/products/kenwood-six-ridges-russian-river-valley-pinot-noir.json"
         },
         {
-            "title": "Kenwood Cabernet Sauvignon",
-            "class_name": "kenwood_cabernet_sauvignon",
-            "type": "Red Wine",
-            "category_order": 1,
-            "category_size": 1,
-            "image_path": "bottle_kenwood.png",
-            "bottle_recommendation_amount": 333,
-            "reservebar_id": "18143311495265",
-            "drinksandco_id": "12208229777533",
-            # "cocktail_title": "Red Wine",
-            "cocktail_image_path": "cocktail_stock_redwine.png",
-            "cocktail_description": "Densely-concentrated character and rich flavor from Dry Creek Valley.",
-            "reservebar_handle":"https://www.reservebar.com/products/kenwood-vineyards-sonoma-series-cabernet-sauvignon.json"
-        },
-        {
             "title": "Kenwood Chardonnay",
             "class_name": "kenwood_chardonnay",
             "type": "White Wine",
@@ -221,21 +206,6 @@ bottles = [
             "cocktail_image_path": "cocktail_stock_redwine.png",
             "cocktail_description": "Densely-concentrated character and rich flavor from Dry Creek Valley.",
             "reservebar_handle": "https://www.reservebar.com/products/kenwood-vineyards-sonoma-series-chardonnay.json"
-        },
-        {
-            "title": "Kenwood Sauvignon Blanc",
-            "class_name": "kenwood_sauvignon_blanc",
-            "type": "White Wine",
-            "category_order": 1,
-            "category_size": 1,
-            "image_path": "bottle_kenwood_sauvignon_blanc.png",
-            "bottle_recommendation_amount": 333,
-            "reservebar_id": "18143311102049",
-            "drinksandco_id": "12208229679229",
-            # "cocktail_title": "White Wine",
-            "cocktail_image_path": "cocktail_stock_redwine.png",
-            "cocktail_description": "Densely-concentrated character and rich flavor from Dry Creek Valley.",
-            "reservebar_handle": "https://www.reservebar.com/products/kenwood-vineyards-sonoma-series-sauvignon-blanc.json"
         },
 
     ]
