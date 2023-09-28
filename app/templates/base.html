@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" >
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JPD6BP55ZW"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-JPD6BP55ZW');
+		</script>
+
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,14 +25,7 @@
 		<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
 		<link rel="stylesheet" href=" {{ url_for('static', filename='css/base.css') }}">
 
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EFBYE1P6W2"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-EFBYE1P6W2');
-		</script>
+
 
 		<title>Bar Calculator</title>
 		<link rel="icon" type="image/x-icon" href="static/favicon.ico">		
