@@ -6,8 +6,13 @@
 
 	<form  id="calc-form" action="" method="post" style="text-align: center;">
 	{{ form.csrf_token }}
-      </div>
+
 		<h1>Bar/Drinks Package Calculator</h1>
+		<div class="subtitle-div">
+			<p> 
+				Estimating the amount of alcohol needed for an event can be a challenge. The calculator below is designed to give you a good estimate based on your event's specifics.
+			</p>
+		</div>
 		<br/>
 		
 		<p class="bottle-text" id="guests">
@@ -71,7 +76,9 @@
 			</div>
 
 <!--advanced options-->
-		<label class="advanced_options_toggle_label"><span class="advanced_options_symbol">+</span> advanced options</label>
+		<!-- 
+			<label class="advanced_options_toggle_label"><span class="advanced_options_symbol">+</span> advanced options</label>
+		-->
 		<div class="advanced_options_container">
 			<div>
 				<label class="spirits_to_include_label" style="font-size:10pt; font-weight:bold; margin-top:10px;">

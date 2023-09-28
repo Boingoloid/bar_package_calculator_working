@@ -18,6 +18,14 @@ body {
   background-color: #f5f5f5;
 }
 
+
+.subtitle-div {
+  width:50%;
+  text-align: center;
+  margin: auto;
+  /* min-width: 300px; */
+}
+
 .form-signin {
   width: 100%;
   max-width: 330px;
@@ -435,8 +443,8 @@ input[type=number] {
 }
 
 .advanced_options_container{
-    display:none;
-    background:#E8E8E8;
+    /* display:none; */
+    /* background:#E8E8E8; */
 }
 
 
