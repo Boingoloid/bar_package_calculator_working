@@ -93,6 +93,8 @@ $(document).ready(function() {
 
     var numberOfSpiritsBottles = $('.include_spirits_checkbox:checked').length;
 
+    console.log("number of spirit brands")
+    console.log(numberOfSpiritsBottles)
     var percentageWine = $('#value_percent_drinking_wine').val()/100;
     var percentageSpirits = $('#value_percent_drinking_spirits').val()/100;
     var percentageBeer = $('#value_percent_drinking_beer').val()/100;
@@ -147,6 +149,7 @@ $(document).ready(function() {
     $("#bottle_count_label_beefeater").html((bottlesPerSpirit) + " bottles");
     $("#bottle_count_label_plymouth").html((bottlesPerSpirit) + " bottles");
     $("#bottle_count_label_altos").html((bottlesPerSpirit) + " bottles");
+    $("#bottle_count_label_casamigos").html((bottlesPerSpirit) + " bottles");    
     $("#bottle_count_label_avion").html((bottlesPerSpirit) + " bottles");
     $("#bottle_count_label_kenwood_cabernet_sauvignon").html(bottlesPerRedWine + " bottles");
     $("#bottle_count_label_kenwood_sixridges_pinotnoir").html(bottlesPerRedWine + " bottles");
@@ -180,7 +183,7 @@ $(document).ready(function() {
         var checkbox_spirit_type = $(this).attr('id');
         checkbox_spirit_type = checkbox_spirit_type.replace("include_spirit_","");
         $('.brand_container_' + checkbox_spirit_type).hide();
-        console.log('checked id: ' + checkbox_spirit_type);
+        console.log('not checked id: ' + checkbox_spirit_type);
         
 
     });

@@ -36,6 +36,8 @@ def before_request():
 @app.route('/', methods=['GET', 'POST'])
 def calculatorEntry():
     form = CalculatorEntryForm()
+    print("Spirit options")
+    print(spirits_options)
     return render_template('calculator-entry.html', form=form, bottles=bottles, spirits_options=spirits_options)
 
 

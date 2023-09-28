@@ -74,13 +74,15 @@
 		<label class="advanced_options_toggle_label"><span class="advanced_options_symbol">+</span> advanced options</label>
 		<div class="advanced_options_container">
 			<div>
-				<label class="spirits_to_include_label" style="font-size:10pt; font-weight:bold; margin-top:10px;">Spirits to include:</label>
+				<label class="spirits_to_include_label" style="font-size:10pt; font-weight:bold; margin-top:10px;">
+					Spirits to include:
+				</label>
 				<hr class="bottle_line" style="">
 				<div class="spirits_options_flex_container">
 					{% for spirit in spirits_options %}
 						<div class="spirits_option_container" style="display:inline;">
 							<label style="display:block; margin:auto; margin-bottom:0px; font-size:10pt;">{{spirit}}</label>
-							{% if spirit|string() == 'Gin' or  spirit|string() == 'Vodka' or spirit|string() == 'Whiskey' %}
+							{% if spirit|string() == 'Gin' or  spirit|string() == 'Vodka' or spirit|string() == 'Whiskey'  %}
 								<input class="include_spirits_checkbox" id="include_spirit_{{ spirit }}" type="checkbox" checked style="display:block; margin:auto; margin-bottom:0px;">
 							{% else %}
 								<input class="include_spirits_checkbox" id="include_spirit_{{ spirit }}" type="checkbox" style="display:block; margin:auto; margin-bottom:0px;">

@@ -7,7 +7,7 @@ spirits_options = [
         "Whiskey",
         "Gin",
         "Tequila",
-        # "Rum",
+        "Mezcal",
     ]
 
 bottles = [
@@ -154,6 +154,21 @@ bottles = [
             "category_order": 2,
             "category_size": 2,
             "image_path": "bottle_avion.png",
+            "bottle_recommendation_amount": 333,
+            "reservebar_id": "18142637686881",
+            "drinksandco_id": 0,
+            "cocktail_title": "Tequila Margarita",
+            "cocktail_image_path": "cocktail_stock_oldfashioned.png",
+            "cocktail_description": "Avion tequila, fresh lime juice, tonic",
+            "reservebar_handle": "https://www.reservebar.com/products/avion-silver-2.json"
+        },
+        {
+            "title": "Vida",
+            "class_name": "vida",
+            "type": "Mezcal",
+            "category_order": 1,
+            "category_size": 1,
+            "image_path": "bottle_vida.png",
             "bottle_recommendation_amount": 333,
             "reservebar_id": "18142637686881",
             "drinksandco_id": 0,
