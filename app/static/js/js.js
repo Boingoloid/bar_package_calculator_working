@@ -155,6 +155,7 @@ $(document).ready(function() {
     $("#bottle_count_label_kenwood_sixridges_pinotnoir").html(bottlesPerRedWine + " bottles");
     $("#bottle_count_label_kenwood_chardonnay").html(bottlesPerWhiteWine + " bottles");
     $("#bottle_count_label_kenwood_sauvignon_blanc").html(bottlesPerWhiteWine + " bottles");
+    $("#bottle_count_label_sculpin").html(drinksBeer + " bottles");
     // $("#bottle_count_label_campo_viejo").html((bottlesWine/4) + " bottles");
 
     if(havingChampagneToast) {

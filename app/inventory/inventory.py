@@ -222,5 +222,19 @@ bottles = [
             "cocktail_description": "Densely-concentrated character and rich flavor from Dry Creek Valley.",
             "reservebar_handle": "https://www.reservebar.com/products/kenwood-vineyards-sonoma-series-chardonnay.json"
         },
-
+        {
+            "title": "Sculpin",
+            "class_name": "sculpin",
+            "type": "Beer",
+            "category_order": 1,
+            "category_size": 1,
+            "image_path": "bottle_sculpin.png",
+            "bottle_recommendation_amount": 333,
+            "reservebar_id": "18142637686881",
+            "drinksandco_id": 0,
+            "cocktail_title": "Tequila Margarita",
+            "cocktail_image_path": "cocktail_stock_oldfashioned.png",
+            "cocktail_description": "Avion tequila, fresh lime juice, tonic",
+            "reservebar_handle": "https://www.reservebar.com/products/avion-silver-2.json"
+        },        
     ]
